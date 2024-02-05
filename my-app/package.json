@@ -19,7 +19,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "PUBLIC_URL=/hh-react-redux react-scripts build && cd .. && git add my-app/build && git commit -m 'update gh-pages' && git push origin hw-react && git subtree push --prefix my-app/build origin gh-pages",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
